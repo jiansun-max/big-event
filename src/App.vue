@@ -1,9 +1,9 @@
 <template>
-  <VC></VC>
+  <TestComponent></TestComponent>
 </template>
 
 <script setup>
-import VC from './components/VC.vue'
+import TestComponent from './components/TestComponent.vue'
 </script>
 
 <style scoped></style>

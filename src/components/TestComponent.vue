@@ -5,7 +5,10 @@
 <script setup>
 import {} from 'vue'
 let titel = 'Hello Vue'
-console.log(a)
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+div {
+  color: red;
+}
+</style>
