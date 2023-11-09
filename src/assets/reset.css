@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none !important;
+    list-style: none;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    user-select: none;
+    resize: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
