@@ -3,95 +3,54 @@
     <el-col :span="12" class="bg"></el-col>
     <el-col :span="6" :offset="3" class="form">
       <template v-if="isRegister">
-        <el-form
-          class="form"
-          size="large"
-          :model="formModel"
-          :rules="rules"
-          ref="formRef"
-        >
+        <el-form class="form" size="large" :model="formModel" :rules="rules" ref="formRef">
           <el-form-item>
             <h1 class="title">登录</h1>
           </el-form-item>
           <el-form-item prop="username">
-            <el-input
-              :prefix-icon="User"
-              v-model="formModel.username"
-              placeholder="请输入用户名"
-            />
+            <el-input :prefix-icon="User" v-model="formModel.username" placeholder="请输入用户名" />
           </el-form-item>
           <el-form-item prop="password">
-            <el-input
-              type="password"
-              :prefix-icon="Lock"
-              v-model="formModel.password"
-              placeholder="请输入密码"
-            />
+            <el-input type="password" :prefix-icon="Lock" v-model="formModel.password" placeholder="请输入密码" />
           </el-form-item>
           <el-form-item>
             <div class="flex">
               <el-checkbox label="记住我" size="large" v-model="isRemenber" />
-              <el-button :key="'忘记密码?'" type="primary" link
-                >忘记密码?</el-button
-              >
+              <el-button :key="'忘记密码?'" type="primary" link>
+                忘记密码?
+              </el-button>
             </div>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" class="button" @click="login"
-              >登录</el-button
-            >
+            <el-button type="primary" class="button" @click="login">
+              登录
+            </el-button>
           </el-form-item>
           <el-form-item>
             <!-- 可自动文字居中？ -->
-            <el-link type="info" :underline="false" @click="switchForm()"
-              >注册 →</el-link
-            >
+            <el-link type="info" :underline="false" @click="switchForm()">注册 →</el-link>
           </el-form-item>
         </el-form>
       </template>
       <template v-else>
-        <el-form
-          class="form"
-          size="large"
-          :model="formModel"
-          :rules="rules"
-          ref="formRef"
-        >
+        <el-form class="form" size="large" :model="formModel" :rules="rules" ref="formRef">
           <el-form-item>
             <h1 class="title">注册</h1>
           </el-form-item>
           <el-form-item prop="username">
-            <el-input
-              :prefix-icon="User"
-              placeholder="请输入用户名"
-              v-model="formModel.username"
-            />
+            <el-input :prefix-icon="User" placeholder="请输入用户名" v-model="formModel.username" />
           </el-form-item>
           <el-form-item prop="password">
-            <el-input
-              type="password"
-              :prefix-icon="Lock"
-              placeholder="请输入密码"
-              v-model="formModel.password"
-            />
+            <el-input type="password" :prefix-icon="Lock" placeholder="请输入密码" v-model="formModel.password" />
           </el-form-item>
           <el-form-item prop="repassword">
-            <el-input
-              type="password"
-              :prefix-icon="Lock"
-              placeholder="请再次输入密码"
-              v-model="formModel.repassword"
-            />
+            <el-input type="password" :prefix-icon="Lock" placeholder="请再次输入密码" v-model="formModel.repassword" />
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" class="button" @click="register"
-              >注册</el-button
-            >
+            <el-button type="primary" class="button" @click="register">注册</el-button>
           </el-form-item>
           <el-form-item>
-            <el-link type="info" :underline="false" @click="switchForm()"
-              >← 登录</el-link
-            >
+            <el-link type="info" :underline="false" @click="switchForm()">← 登录</el-link>
           </el-form-item>
         </el-form>
       </template>
@@ -218,6 +177,7 @@ const { isRemenber } = storeToRefs(store)
     background-position-x: 60%, center;
     border-radius: 0 20px 20px 0;
   }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -226,9 +186,11 @@ const { isRemenber } = storeToRefs(store)
     .title {
       margin-bottom: 10px;
     }
+
     .button {
       width: 100%;
     }
+
     .flex {
       display: flex;
       justify-content: space-between;
